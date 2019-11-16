@@ -1,0 +1,147 @@
+.header{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	background: #668B8B;
+	color: #FFFFFF;
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+}
+.header h4,.header i{
+	font-weight: normal;
+	-webkit-app-region: no-drag;
+}
+.header h4{
+	font-size: 16px;
+}
+.header i.iconfont{
+	color: #F8F8F8;
+	opacity: 0.8;
+	font-size: 18px;
+}
+.header i.iconfont:hover{
+	color: #FFFFFF;
+	opacity: 1;
+}
+.neck{
+	width: 100%;
+	height: 38px;
+	padding-top: 2px;
+	line-height: 36px;
+	overflow: hidden;
+	/*border-bottom: 1px solid #EEEEEE;*/
+	position: relative;
+}
+.neck::after{
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid #EEEEEE;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 9;
+}
+.neck .select_options{
+	float: left;
+	height: 100%;
+	text-align: center;
+	display: flex;
+}
+
+.neck .select_options span{
+	padding: 0 25px;
+	position: relative;
+	display: block;
+}
+.neck .select_options span b{
+	width:0;
+	height:0;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+	border-bottom:8px solid #EEEEEE;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	z-index: 10;
+}
+.neck .select_options span b i{
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #FFFFFF;
+	position: absolute;
+	left: -8px;
+	top: 2px;
+}
+.neck .select_options span:hover{
+	color: #4169E1
+}
+.neck .select_options span.active{
+	color: #4169E1
+}
+.neck .select_options span.active b{
+	display: block
+}
+.neck .select_options span:nth-child(2){
+	margin: 0 3px;
+}
+.neck .default_btn{
+	float: right;
+	font-size: 13px;
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	color: #777777;
+}
+.neck .default_btn:hover{
+	color: #4169E1
+}
+.neck .default_btn i{
+	font-size: 20px;
+	font-weight: bold;
+	display: block;
+	padding-top: 2px;
+}
+.container .section{
+	width: 100%;
+	padding: 10px 15px;
+	height: calc(100% - 143px);
+	overflow: hidden;
+	overflow-y: scroll;
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: space-between;*/
+	align-content: flex-start;
+}
+.section div{
+	width: 24.8%;
+	height: 75px;
+	margin-bottom: 5px;
+	position: relative;
+	overflow: hidden;
+	padding: 0 5px;
+}
+.section div img{
+	min-width: calc(100% + 5px) ;
+	height: 100%;
+	/*position: absolute;*/
+	/*display: inline-block;*/
+	/*vertical-align: middle;*/
+}
+.footer{
+	height: 64px;
+}
+
+
+
+

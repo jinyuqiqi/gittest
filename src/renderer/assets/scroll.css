@@ -1,0 +1,55 @@
+.scrollList{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
+    /*padding-right: 8px;*/
+    position: relative;
+}
+/*.scrollList:after{
+    position: absolute;
+    content: " ";
+    width: 8px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: transparent;
+    opacity: 0;
+}*/
+.scrollList::-webkit-scrollbar
+{
+    width: 7px;
+    height: 7px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+ 
+.scrollList::-webkit-scrollbar-track
+{
+    border-radius: 2px;
+    visibility: hidden;
+}
+ 
+.scrollList::-webkit-scrollbar-thumb
+{
+    border-radius: 2px;
+    background-color: #A9A9A9;
+    visibility: hidden;
+}
+.scrollList:hover::-webkit-scrollbar{
+    visibility: visible;
+    opacity: 0.8
+}
+.scrollList:hover::-webkit-scrollbar-track{
+    visibility: visible;
+    opacity: 0.8
+}
+.scrollList:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+    opacity: 0.8
+}
+
+

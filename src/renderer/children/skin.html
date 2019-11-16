@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>皮肤</title>
+</head>
+<body v-cloak>
+	<div id="app" v-show="mounted">
+		<div class="container">
+			<div class="header">
+				<h4>主题皮肤与窗口调整</h4>
+				<i @click="destroyWin" class="iconfont pointer icon-guanbi-"></i>
+			</div>
+			<div class="neck">
+				<div class="select_options">
+					<span @click="tabEvent(1)" class="pointer" :class="tabAcIndex===1?'active':''">推荐<b><i></i></b></span>
+					<span @click="tabEvent(2)" class="pointer" :class="tabAcIndex===2?'active':''">纯色<b><i></i></b></span>
+					<span @click="tabEvent(3)" class="pointer" :class="tabAcIndex===3?'active':''">我的<b><i></i></b></span>
+				</div>
+				<div class="default_btn pointer">
+					<i class="iconfont icon-btn_drawrec"></i>
+					<span>恢复窗口默认状态</span>
+				</div>
+			</div>
+			<div class="section scrollList">
+				<div @click="peeling(item.imgKey)" class="pointer" v-for="(item, index) in bgList" :key="index">
+					<img :src="item.imgUrl">
+				</div>
+			</div>
+			<div class="footer">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html> 
